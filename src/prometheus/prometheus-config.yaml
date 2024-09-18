@@ -14,10 +14,10 @@ scrape_configs:
     basic_auth:
       username: "daniel"
       password: "123456"
-  
+
   - job_name: "node-exporter"
     static_configs:
-      - targets: ["node_exporter:9100"]
+      - targets: ["localhost:9100"]
     basic_auth:
       username: "daniel"
       password: "123456"

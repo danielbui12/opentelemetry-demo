@@ -13,7 +13,7 @@ datasources:
     isDefault: true
     basicAuth: true
     basicAuthUser: daniel
-    basicAuthPassword: $2b$12$ufH5SjbeV0Eq.cbX6YtrMOiboczQcgouVLAOUdrCoL97bTlyMfnIW
+    basicAuthPassword: 123456
     jsonData:
       exemplarTraceIdDestinations:
         - datasourceUid: webstore-traces
