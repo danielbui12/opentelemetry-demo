@@ -11,6 +11,9 @@ datasources:
     url: http://prometheus:9090
     editable: true
     isDefault: true
+    basicAuth: true
+    basicAuthUser: daniel
+    basicAuthPassword: $2b$12$ufH5SjbeV0Eq.cbX6YtrMOiboczQcgouVLAOUdrCoL97bTlyMfnIW
     jsonData:
       exemplarTraceIdDestinations:
         - datasourceUid: webstore-traces

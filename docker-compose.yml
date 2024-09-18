@@ -713,21 +713,6 @@ services:
       - OTEL_COLLECTOR_PORT_GRPC
       - OTEL_COLLECTOR_PORT_HTTP
 
-  # Prometheus Node Exporter
-  node_exporter:
-    image: ${NODE_EXPORTER_IMAGE}
-    container_name: node_exporter
-    command:
-      - '--path.rootfs=/host'
-      - '--web.config.file=/etc/node_exporter/web.yaml'
-    network_mode: host
-    pid: host
-    restart: unless-stopped
-    volumes:
-      - '/:/host:ro,rslave'
-      - ./src/node_exporter/web.yaml:/etc/node_exporter/web.yaml
-    logging: *logging
-
   # Prometheus
   prometheus:
     image: ${PROMETHEUS_IMAGE}
